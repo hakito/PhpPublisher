@@ -1,5 +1,8 @@
 # PhpPublisher
 
+[![Build Status](https://travis-ci.com/hakito/PhpPublisher.svg?branch=master)](https://travis-ci.com/hakito/PhpPublisher)
+[![Coverage Status](https://coveralls.io/repos/github/hakito/PhpPublisher/badge.svg?branch=master)](https://coveralls.io/github/hakito/PhpPublisher?branch=master)
+
 Simple proxy for accessing protected/private class members.
 
 It's intention is to give unit tests access to private members without
