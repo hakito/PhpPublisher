@@ -1,5 +1,5 @@
 {
-    "name": "hakito/Publisher",
+    "name": "hakito/publisher",
     "description": "Proxy for accessing protected/private class members.",
     "homepage": "https://github.com/hakito/PhpPublisher",
     "license": "MIT",
