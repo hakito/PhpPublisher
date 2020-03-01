@@ -37,7 +37,7 @@ Create the proxy to access these members:
 
 ```php
 $target = new Target();
-$published = new hakito/Publisher/Published($target);
+$published = new hakito\Publisher\Published($target);
 
 // Get private property
 $property = $published->foo;
@@ -63,7 +63,7 @@ class Target
 }
 
 $target = new Target();
-$published = new hakito/Publisher/Published($target);
+$published = new hakito\Publisher\Published($target);
 $val = 'initial';
 $published->methodWithReferenceArgument($val);
 // $val is still 'initial'
