@@ -18,7 +18,7 @@ to access private members of a class instead of reflection.
 ## Installation
 
 ```bash
-composer require hakito/Publisher
+composer require hakito/publisher
 ```
 
 ## Usage
