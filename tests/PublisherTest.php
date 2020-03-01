@@ -9,6 +9,7 @@ use hakito\Publisher\Published;
 class TargetBase
 {
     protected $p_foo = 'base';
+    private $foo = 'baseFoo';
 }
 
 class Target extends TargetBase
@@ -34,6 +35,12 @@ final class PublisherTest extends TestCase
     public function testGetProperty()
     {
         $this->assertEquals('initial', $this->published->foo);
+    }
+
+    public function testPublishBaseClass()
+    {
+        $p = new Published($this->target, TargetBase::class);
+        $this->assertEquals('baseFoo', $p->foo);
     }
 
     public function testSetProperty()

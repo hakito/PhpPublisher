@@ -50,6 +50,17 @@ $published->foo = 'outsider';
 // call private method
 $name = $published->bar('Saloon');
 // $name = 'SaloonBar';
+
+
+// Optional you can provide a base class in the constructor
+class Derived extends Target {
+    private $foo = 'derived';
+}
+
+$derived = new Derived();
+$published = new hakito\Publisher\Published($derived, Target::class);
+$property = $published->foo; // Gets property from Target
+// $property = 'secret';
 ```
 
 ## Limitations
