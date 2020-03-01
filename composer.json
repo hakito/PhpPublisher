@@ -1,0 +1,22 @@
+{
+    "name": "hakito/Publisher",
+    "description": "Proxy for accessing protected/private class members.",
+    "homepage": "https://github.com/hakito/PhpPublisher",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "hakito\\Publisher\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "hakito\\Publisher\\Test\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    }
+}
