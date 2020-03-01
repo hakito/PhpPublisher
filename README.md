@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.com/hakito/PhpPublisher.svg?branch=master)](https://travis-ci.com/hakito/PhpPublisher)
 [![Coverage Status](https://coveralls.io/repos/github/hakito/PhpPublisher/badge.svg?branch=master)](https://coveralls.io/github/hakito/PhpPublisher?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/hakito/publisher/v/stable)](https://packagist.org/packages/hakito/publisher)
+[![Total Downloads](https://poser.pugx.org/hakito/publisher/downloads)](https://packagist.org/packages/hakito/publisher)
+[![Latest Unstable Version](https://poser.pugx.org/hakito/publisher/v/unstable)](https://packagist.org/packages/hakito/publisher)
+[![License](https://poser.pugx.org/hakito/publisher/license)](https://packagist.org/packages/hakito/publisher)
 
 Simple proxy for accessing protected/private class members.
 
