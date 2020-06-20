@@ -14,10 +14,12 @@ class TargetBase
 
 class Target extends TargetBase
 {
+    private $arr = [];
     private $foo = 'initial';
     private function bar($arg) { return $arg . 'Bar'; }
     private $propertyGetter = 'something';
 
+    public function getArr() { return $this->arr; }
     public function getFoo() { return $this->foo; }
     public function getHidden() { return $this->propertyGetter; }
 }
@@ -35,6 +37,12 @@ final class PublisherTest extends TestCase
     public function testGetProperty()
     {
         $this->assertEquals('initial', $this->published->foo);
+    }
+
+    public function testGetPropertyReference()
+    {
+        $this->published->arr['IsSet'] = 'ByRef';
+        $this->assertEquals(['IsSet' => 'ByRef'], $this->target->getArr());
     }
 
     public function testPublishBaseClass()

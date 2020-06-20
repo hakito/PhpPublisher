@@ -65,7 +65,7 @@ $property = $published->foo; // Gets property from Target
 
 ## Limitations
 
-The published method call cannot set a reference argument.
+### The published method call cannot set a reference argument.
 
 ```php
 class Target
@@ -78,4 +78,20 @@ $published = new hakito\Publisher\Published($target);
 $val = 'initial';
 $published->methodWithReferenceArgument($val);
 // $val is still 'initial'
+```
+
+### The return value from method call cannot be a reference
+
+```php
+class Target
+{
+    private $_member = [];
+    private function &methodWithReferenceReturnValue($arg) { return $this->_member; }
+}
+
+$target = new Target();
+$published = new hakito\Publisher\Published($target);
+$val = 'initial';
+$published->methodWithReferenceReturnValue($val)['new'] = 'value';
+// Target::_member is still []
 ```
