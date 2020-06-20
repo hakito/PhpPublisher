@@ -30,6 +30,8 @@ class Target
 {
     private $foo = 'secret';
     private function bar($arg) { return $arg . 'Bar'; }
+
+    private static $sFoo = 'staticSecret';
 }
 ```
 
@@ -62,6 +64,19 @@ $published = new hakito\Publisher\Published($derived, Target::class);
 $property = $published->foo; // Gets property from Target
 // $property = 'secret';
 ```
+
+### Accessing static members
+
+If you want to access static fields or methods you have to use the class StaticPublished
+
+```php
+$published = new StaticPublished(Target::class);
+
+$property = $published->sFoo;
+// $property = 'staticSecret'
+```
+
+Setting fields and calling methods works the same as for instances.
 
 ## Limitations
 

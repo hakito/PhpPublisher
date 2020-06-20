@@ -24,7 +24,7 @@ class Target extends TargetBase
     public function getHidden() { return $this->propertyGetter; }
 }
 
-final class PublisherTest extends TestCase
+final class PublishedTest extends TestCase
 {
 
     public function setUp() : void
